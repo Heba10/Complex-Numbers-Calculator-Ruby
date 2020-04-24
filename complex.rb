@@ -29,7 +29,8 @@ class ComplexNum
     def self.bulk_add(nums)
 		complex_num = nums[0]
 		i = 1
-        puts "steps to adding array complex number\n"
+        puts "steps of add array complex number\n\n"
+       
 			while i < nums.count
 				complex_num += nums[i]
 				i += 1
@@ -39,6 +40,29 @@ class ComplexNum
 
 			return complex_num
 	end
+
+
+	def self.bulk_multiply(nums)
+		
+        complex_num = nums[0]
+
+                        i = 1
+            
+            puts "steps of Multiply array complex number\n\n"
+                        while i < nums.count
+                            complex_num *= nums[i]
+                                i += 1
+                        end
+
+                        puts "the mult bulk ===>>> (#{complex_num.real} + #{complex_num.imag}i)"
+
+                        return complex_num
+               
+
+	end
+
+
+
 
 
 end
@@ -53,6 +77,7 @@ complex_array = [complex1, complex2, complex3]
 add = complex1 + complex2
 mult = complex1 * complex2
 ComplexNum.bulk_add(complex_array)
+ComplexNum.bulk_multiply(complex_array)
 
 
 
