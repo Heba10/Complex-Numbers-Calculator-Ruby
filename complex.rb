@@ -13,16 +13,27 @@ class ComplexNum
 		
 		puts "(#{self.real} + #{self.imag}i) + (#{num.real} + #{num.imag}i) = #{real} + #{imag}i"
 		return ComplexNum.new(real, imag)
+    end
+    # ///////////////////////////////////////////////////////////////////////////////////////////////
+    # mult function
+    def *(num)
+		real = (self.real * num.real) - (self.imag * num.imag)
+		imag = (self.real * num.imag) + (self.imag * num.real)
+	
+		puts "(#{self.real} + #{self.imag}i) * (#{num.real} + #{num.imag}i) = #{real} + #{imag}i"		
+
+		return ComplexNum.new(real, imag)
 	end
 
 
 
 end
 
-complex = ComplexNum.new(3, 3)
+complex1 = ComplexNum.new(3, 3)
 complex2 = ComplexNum.new(8, 8)
 
-add = complex + complex2
+add = complex1 + complex2
+mult = complex1 * complex2
 
 
 
